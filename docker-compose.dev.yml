@@ -2,13 +2,25 @@ version: "3"
 services:
   react-app:
     build:
-      context: .
+      context: ./
       dockerfile: Dockerfile.dev
     ports:
       - "3000:3000"
     volumes:
-      - ./:/app:ro
+      - ./:/app
       - /app/node_modules
     environment:
       # The following environment variable is used to enable hot reloading~
       - WATCHPACK_POLLING=true
+  react-app-tests:
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      # The following environment variable is used to enable hot reloading~
+      - WATCHPACK_POLLING=true
+    command: npm run test
+
