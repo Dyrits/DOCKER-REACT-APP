@@ -1,14 +1,14 @@
 # DOCKER-REACT-APP
 
-A React app (Create React App) with Docker development and Nginx production setups.
+A React learning app with Vite, Docker development and an Nginx production image.
 
 ## About The Project
 
-A Create React App project with a Docker-based development environment (`Dockerfile.dev` + `docker-compose.dev.yml`, including a tests service) and a multi-stage production image (`Dockerfile.prod`) serving the build with Nginx. The app itself is the default Create React App page.
+A Vite-based React project with a Docker-based development environment (`Dockerfile.dev` + `docker-compose.dev.yml`, including a tests service) and a multi-stage production image (`Dockerfile.prod`) serving the build with Nginx. The app retains the original React starter page.
 
 ### Built With
 
-- React (Create React App)
+- React and Vite
 - Docker Compose
 - Nginx (production image)
 
