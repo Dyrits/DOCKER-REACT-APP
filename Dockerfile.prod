@@ -1,7 +1,7 @@
-FROM node:26-alpine as builder
+FROM node:26.13.0-alpine as builder
 WORKDIR /app
-COPY ./package.json ./
-RUN npm install
+COPY package.json package-lock.json ./
+RUN npm ci
 COPY ./ ./
 RUN npm run build
 

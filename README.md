@@ -47,3 +47,9 @@ No license file is present in this repository.
 ## Contact
 
 Dyrits - https://github.com/Dyrits
+
+## Current development tooling
+
+Use Node.js 26.13.0 LTS (`.nvmrc`) and `npm ci`. The project uses Vite 8 and Vitest 5 instead of the unmaintained Create React App build chain. `npm start` serves port 3000, `npm run build` writes `build/`, `npm test` runs tests once, and `npm run test:watch` watches tests. JSX source files use `.jsx` extensions.
+
+The checked source is a learning scaffold. The Dockerfiles keep the same build output and port; Docker image build/run was not available during verification. Clean install, production build and unit checks were tested on Node 26.13.0.
